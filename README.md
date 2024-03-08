@@ -7,7 +7,7 @@ Using this **simple custom code**:
 ```ts
 export default async function fetchData(nango: NangoSync) {
     // Fetch issues from GitHub.
-    const res = await nango.get({ '/repos/NangoHQ/interactive-demo/issues' });
+    const res = await nango.get({ endpoint: '/repos/NangoHQ/interactive-demo/issues' });
     
     // Map issues to your preferred schema.
     const issues = res.data.map(issue => ({ id, title, url }));
